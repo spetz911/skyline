@@ -2,25 +2,23 @@
 # This file defines all application routes (Higher priority routes first)
 # ~~~~
 
-# Home page
-GET         /play                    controllers.Application.index
-
-GET         /                        controllers.Application.home
-
-
 # Map static resources from the /public folder to the /assets URL path
 GET         /assets/*file            controllers.Assets.at(path="/public", file)
 
 
-# Tasks
-GET         /tasks                   controllers.Application.tasks
-POST        /tasks                   controllers.Application.newTask
-POST        /tasks/:id/delete        controllers.Application.deleteTask(id: Long)
+# Home page
+GET         /                        controllers.Processing.showHome
 
-POST         /sayHello                controllers.Application.sayHello
+#GET         /                        controllers.Application.index
+#GET         /home                    controllers.Processing.showHome
+GET         /text                    controllers.Processing.showText
+GET         /dict                    controllers.Processing.showDict
 
 
-GET          /ololo                   controllers.Processing.showText
+#GET         /mmm                     controllers.Processing.showModel
 
-GET          /mmm                   controllers.Processing.showModel
+#GET         /okay                    controllers.Ngrams.index
+
+#POST        /sayHello                controllers.Application.sayHello
+POST        /contacts                controllers.Processing.submit
 

@@ -1,0 +1,15 @@
+@(message: String)(userForm: Form[LangEntity])
+
+@root("lang")("Welcome to Play 2.1") {
+   <p>OLOLOL OLOL olo lol olololo</p>
+
+    @helper.form(action = routes.Processing.submit) {
+        @helper.inputText(userForm("word"))
+        @helper.inputText(userForm("count"))
+        <div class="form-actions">
+            <button type="submit">Create Product</button>
+        </div>
+    }
+
+   <p> @message </p>
+}

@@ -4,13 +4,15 @@ import play.Project._
 
 object ApplicationBuild extends Build {
 
-  val appName         = "untitledxx"
+  val appName         = "skyline"
   val appVersion      = "1.0-SNAPSHOT"
 
   val appDependencies = Seq(
     // Add your project dependencies here,
     jdbc,
-    anorm
+    anorm,
+    "org.mongodb" %% "casbah" % "2.6.4",
+    "net.debasishg" %% "redisclient" % "2.10"
   )
 
 

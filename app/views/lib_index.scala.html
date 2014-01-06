@@ -1,0 +1,30 @@
+@(posts: List[Book])
+
+@import helper._
+
+<!DOCTYPE html>
+
+@root("lib")("dsad") {
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th class="span4">Caption</th>
+                <th class="span1">Author</th>
+                <th class="span1">Date</th>
+                <th class="span3">Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for(row <- posts) {
+            <tr>
+                <td>@row.title</td>
+                <td>@row.creator</td>
+                <td>
+                    <a href="@row.url">read now...</a>
+            </td>
+            </tr>
+            }
+
+        </tbody>
+    </table>
+}

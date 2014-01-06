@@ -1,0 +1,10 @@
+@(words: Map[String, Int])
+
+@root("dict")("Welcome to Play 2.1") {
+
+    <ul>
+    @for((word, count) <- words) {
+        <li><cite>@word</cite> == @count</li>
+    }
+    </ul>
+}
