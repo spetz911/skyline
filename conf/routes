@@ -10,7 +10,7 @@ GET         /assets/*file            controllers.Assets.at(path="/public", file)
 GET         /                        controllers.Processing.showHome
 
 #GET         /                        controllers.Application.index
-#GET         /home                    controllers.Processing.showHome
+GET         /home                    controllers.Application.showHome2
 GET         /text                    controllers.Processing.showText
 GET         /dict                    controllers.Processing.showDict
 

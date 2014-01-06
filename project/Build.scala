@@ -9,10 +9,11 @@ object ApplicationBuild extends Build {
 
   val appDependencies = Seq(
     // Add your project dependencies here,
-    jdbc,
-    anorm,
     "org.mongodb" %% "casbah" % "2.6.4",
-    "net.debasishg" %% "redisclient" % "2.10"
+    "net.debasishg" %% "redisclient" % "2.10",
+    "org.apache.lucene" % "lucene-core" % "4.6.0",
+    "org.apache.lucene" % "lucene-analyzers-common" % "4.6.0",
+    "org.apache.lucene" % "lucene-queryparser" % "4.6.0"
   )
 
 

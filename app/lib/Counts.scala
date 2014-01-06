@@ -6,12 +6,6 @@ package lib
  * Date: 02/11/13
  * Time: 20:58
  */
-class Counts {
-
-
-
-}
-
 
 object Counts {
   val text =
