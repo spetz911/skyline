@@ -36,7 +36,7 @@ object Processing extends Controller {
     val res2 : String = db.collectionNames.mkString(" ")
 
 
-    Ok(views.html.home(res + " xxx " + res2))
+    Ok(views.html.home(Array(res, " xxx ", res2)))
   }
 
 
@@ -72,7 +72,7 @@ object Processing extends Controller {
   }
 
 
-  val wordDict = (for ((line,i)  <- Source.fromFile("/Users/oleg/_lang/en_counts.txt").getLines().zipWithIndex ;
+  val wordDict = (for ((line,i)  <- Source.fromFile("/Users/oleg/_lang_vocabulary/en_counts.txt").getLines().zipWithIndex ;
                    a :: b :: _ = line.split(' ').toList )
               yield (a, b.toInt)).toMap
 

@@ -1,7 +1,9 @@
-@(message: String)
+@(message: Iterable[String])
 
 @root("home")("Welcome to Play 2.1") {
 
-    <p>@message</p>
+    @for(x <- message) {
+        <p>@x</p>
+    }
 
 }
